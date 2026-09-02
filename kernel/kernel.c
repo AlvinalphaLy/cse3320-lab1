@@ -27,8 +27,7 @@ void kernel_main() {
 	sys_timer_init();                   // kernel timer: delay, timekeeping...
 	enable_interrupt_controller(0);     // coreid
 	// quest: sys_timer irq
-// 	enable_irq();		// !STUDENT_DONOT_SEE
-	/* STUDENT_TODO: your code here */
+	enable_irq();
 
 	generic_timer_init();               // periodic ticks alive
 
@@ -41,8 +40,7 @@ void kernel_main() {
 
 	// quest: pixel donut. call donut_simple()
 	/* to enable it,  irq handler must be modified to call sys_timer_irq_simple() */
-// 	// donut_simple();		// !STUDENT_DONOT_SEE		directly uses hw timer irq for animation
-	/* STUDENT_TODO: your code here */
+	donut_simple();
 	
 	// donut_text();		// uncomment to see the textual (uart) donut animation instead
 
