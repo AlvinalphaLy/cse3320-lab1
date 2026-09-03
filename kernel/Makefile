@@ -12,11 +12,7 @@ COPS = -Wall -Werror -nostdlib -nostartfiles -ffreestanding \
 -I$(SRC_DIR) \
 -Iaddon/usb/include\
 -mgeneral-regs-only \
--g 
-
-# Temporarily allow unused variables to avoid compiler complaints.
-# This should be commented out after completing all quests.
-COPS += -Wno-unused-variable -Wno-unused-but-set-variable # STUDENT_TODO: replace this !STUDENT_SHOULD_WRITE()
+-g
 
 # the default debug level, to be overridden by less verbose levels in individual files 
 COPS += -DCONFIG_GLOBAL_DEBUG_LEVEL=10   # verbose
